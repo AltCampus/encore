@@ -1,0 +1,42 @@
+/* Wrappers */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Bacground-color {
+.bg {
+  background-color: #fbfbfd;
+}
+
+// Section Padding
+.padding-v {
+  padding: 5rem 0;
+}
+
+// Full Width
+.width-full {
+  width: 100%;
+}
+
+/* Flex */
+.sm-flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+  }
+  .col-1-3 {
+    flex: 0 1 30%;
+  }
+}

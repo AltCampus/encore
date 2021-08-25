@@ -1,0 +1,80 @@
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  input,
+  label {
+    display: none;
+  }
+  label {
+    line-height: 0;
+  }
+}
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+.navbar-menu li {
+  margin-left: 2.5rem;
+}
+.navbar-menu a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 0.5rem;
+  // font-style: italic;
+  &.active {
+    border-bottom: 2px solid #e93e32;
+  }
+  &:hover {
+    color: #e93e32;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar label {
+    display: inline-block;
+  }
+  .navbar-nav {
+    display: none;
+    position: fixed;
+    top: 0.5rem;
+    right: -100%;
+    background-color: #fff;
+    padding: 1rem 4rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    li {
+      margin: 2rem 0;
+    }
+    a {
+      color: #0b1d54;
+      padding-bottom: 0;
+      font-weight: 500;
+      font-size: 2rem;
+      &.active {
+        border-bottom: 0;
+      }
+    }
+    .navbar-close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+  }
+  #toggle:checked ~ .navbar-nav {
+    display: inline-block;
+    animation: menu-slider 500ms ease-in-out forwards;
+  }
+  @keyframes menu-slider {
+    0% {
+      right: -100%;
+    }
+    100% {
+      display: inline-block;
+      right: 0.5rem;
+    }
+  }
+}

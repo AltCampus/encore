@@ -1,0 +1,25 @@
+.footer {
+  background-color: #0b1d54;
+  padding: 3rem 0;
+  small {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  a {
+    padding: 0;
+    text-transform: capitalize;
+    color: #bfcbef;
+    &.active {
+      border-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    nav {
+      margin-top: 2rem;
+    }
+    li {
+      margin: 0;
+    }
+  }
+}
